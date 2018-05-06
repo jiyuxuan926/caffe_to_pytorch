@@ -4,6 +4,9 @@ This tool aims to load caffe prototxt and weights directly in pytorch without ex
 ### Usage
 use the model and weight directly in pytorch, and save the model as.pth file
 
+Download ![caffemodel of resnet50](https://pan.baidu.com/s/1YnvN8Hy9cZLqFtKPqs4X-g), unzip it to model.
+Then
+
 python caffe_pytorch.py
 
 
@@ -12,6 +15,7 @@ python caffe_pytorch.py
 - [x] support forward detection networks: [SSD300](https://drive.google.com/open?id=0BzKzrI_SkD1_WVVTSmQxU0dVRzA), [S3FD](https://github.com/sfzhang15/SFD), FPN
 
 ### Supported Layers
+We modify the convolution and deconvolution layer, so their kernel size can be int of kernel_size or tuple of(kernel_h, kernel_w)
 Each layer in caffe will have a corresponding layer in pytorch. 
 - [x] Convolution
 - [x] InnerProduct
